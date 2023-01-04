@@ -1,0 +1,16 @@
+[alias]
+	s = status
+	co = checkout
+	aliases = config --get-regexp ^alias
+	br = branch
+	lc = log --oneline --graph -15
+	aa = add .
+[core]
+	editor = nvim
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+  ui = auto
