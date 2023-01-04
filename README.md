@@ -6,7 +6,15 @@ Enviroment configurations for development
 - PowerShell config
 - git config
 
+## PoweShell setup
+![](images/powershell.png)
+![](images/psreadline.png)
+- [Oh My Posh](https://ohmyposh.dev/) - Prompt theme engine
+- [Terminal Icons](https://github.com/devblackops/Terminal-Icons) - Folder and file icons
+- [PSReadLine](https://docs.microsoft.com/en-us/powershell/module/psreadline/) - Cmdlets for customizing the editing environment, used for autocompletion
+
 ## Neovim setup
+![](images/vim.png)
 ### Theme
 - [Gruvbox](https://github.com/morhetz/gruvbox) - Gruvbox theme
 ### Syntax
@@ -25,7 +33,3 @@ Enviroment configurations for development
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Gaze deeply into unknown regions using the power of the moon.
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) - All the lua functions I don't want to write twice.
 
-## PoweShell setup
-- [Oh My Posh](https://ohmyposh.dev/) - Prompt theme engine
-- [Terminal Icons](https://github.com/devblackops/Terminal-Icons) - Folder and file icons
-- [PSReadLine](https://docs.microsoft.com/en-us/powershell/module/psreadline/) - Cmdlets for customizing the editing environment, used for autocompletion
