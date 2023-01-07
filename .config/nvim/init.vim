@@ -13,7 +13,7 @@ call plug#begin('~\AppData\Local\nvim\plugged')
 	Plug 'sheerun/vim-polyglot'
 	Plug 'windwp/nvim-autopairs'
 	Plug 'mattn/emmet-vim'
-	Plug 'lukas-reineke/indent-blankline.nvim'
+	Plug 'OmniSharp/omnisharp-vim'
 
 	" GUI
 	Plug 'scrooloose/nerdtree'
@@ -30,7 +30,7 @@ call plug#begin('~\AppData\Local\nvim\plugged')
 call plug#end()
 
 lua << EOF
-require("nvim-autopairs").setup {}
+require("nvim-autopairs").setup {} 
 EOF
 
 " Mappings
@@ -38,12 +38,18 @@ inoremap jf <Esc>
 inoremap <C-s> <Esc>:w<CR>
 nnoremap <C-s> :w<CR>
 nnoremap exit :q!<CR>
-nnoremap markp :MarkdowPreview<CR>
+nnoremap markp :MarkdownPreview<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Telescope Mappings
+nnoremap tele <cmd>Telescope find_files<cr>
+nnoremap telb <cmd>Telescope buffers<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 "Mappings COC Auto Select
 inoremap <silent><expr> <TAB>
@@ -54,17 +60,11 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-" Telescope Mappings
-nnoremap tele <cmd>Telescope find_files<cr>
-nnoremap telb <cmd>Telescope buffers<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-
 " Theme configurations
 function! s:start_theme()
   " Your theme customizations (function created for goyo theme reset)
 	hi Normal guibg=NONE ctermbg=NONE
+	let g:mkdp_theme = 'light'
 endfunction
 
 
