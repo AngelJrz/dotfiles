@@ -38,6 +38,7 @@ inoremap jf <Esc>
 inoremap <C-s> <Esc>:w<CR>
 nnoremap <C-s> :w<CR>
 nnoremap exit :q!<CR>
+nnoremap markp :MarkdowPreview<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
