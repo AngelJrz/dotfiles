@@ -1,0 +1,46 @@
+{
+  "suggest.completionItemKindLabels": {
+    "method": "  ",
+    "function": "  ",
+    "variable": "[]",
+    "field": "  ",
+    "typeParameter": "<>",
+    "constant": "  ",
+    "class": " פּ ",
+    "interface": " 蘒",
+    "struct": "  ",
+    "event": "  ",
+    "operator": "  ",
+    "module": "  ",
+    "property": "  ",
+    "enum": " 練",
+    "reference": "  ",
+    "keyword": "  ",
+    "file": "  ",
+    "folder": " ﱮ ",
+    "color": "  ",
+    "unit": " 塞 ",
+    "snippet": "  ",
+    "text": "  ",
+    "constructor": "  ",
+    "value": "  ",
+    "enumMember": "  "
+  },
+    "suggest.floatConfig": {
+    "rounded": true,
+    "border": true
+  },
+  "signature.floatConfig": {
+    "rounded": true,
+    "border": true
+  },
+    "diagnostic.floatConfig": {
+    "rounded": true,
+    "border": true
+  },
+    "hover.floatConfig": {
+    "rounded": true,
+    "border": true
+  },
+  "coc.source.word.filetypes": ["markdown"]
+}
