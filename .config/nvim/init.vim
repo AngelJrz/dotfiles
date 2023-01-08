@@ -76,5 +76,8 @@ set background=dark
 let g:everforest_background = 'soft'
 let g:everforest_better_performance = 1
 let g:everforest_transparent_background = 1
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
 autocmd! colorscheme everforest call s:start_theme()
 colorscheme everforest
