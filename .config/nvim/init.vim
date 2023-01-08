@@ -3,11 +3,11 @@ set mouse=a
 set showcmd
 set encoding=utf-8
 syntax enable
+set number
 
 call plug#begin('~\AppData\Local\nvim\plugged')
 	" themes
-	Plug 'morhetz/gruvbox'
-
+	Plug 'sainnhe/everforest'
 	"Syntax
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'sheerun/vim-polyglot'
@@ -63,10 +63,18 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 " Theme configurations
 function! s:start_theme()
   " Your theme customizations (function created for goyo theme reset)
+	hi NonText ctermbg=NONE
 	hi Normal guibg=NONE ctermbg=NONE
+  hi EndOfBuffer guibg=NONE ctermbg=NONE
 	let g:mkdp_theme = 'light'
 endfunction
 
-
-autocmd! ColorScheme gruvbox call s:start_theme()
-colorscheme gruvbox
+if has('termguicolors')
+	set termguicolors
+endif
+set background=dark
+let g:everforest_background = 'soft'
+let g:everforest_better_performance = 1
+let g:everforest_transparent_background = 1
+autocmd! colorscheme everforest call s:start_theme()
+colorscheme everforest
