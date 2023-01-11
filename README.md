@@ -1,4 +1,4 @@
-# dotfiles
+# My  dotfiles
 Enviroment configurations for development
 
 ## Contents
@@ -26,7 +26,7 @@ Enviroment configurations for development
 ### GUI
 - [nerdtree](https://github.com/preservim/nerdtree) - File system explorer for the Vim editor.
 - [vim-devicons](https://github.com/ryanoasis/vim-devicons) - Icons for vim.
-- [lightline.vim](https://github.com/itchyny/lightline.vim) - A light and configurable statusline/tabline plugin for Vim.
+- [stat.nvim](https://github.com/leath-dub/stat.nvim) - Less bloated statusline.
 ### Utilities
 - [goyo.vim](https://github.com/junegunn/goyo.vim) - Distraction-free writing in Vim.
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) - Preview markdown on your modern browser.
