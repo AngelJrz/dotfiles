@@ -6,7 +6,7 @@ Enviroment configurations for development
 - NeoVim 
 - git 
 
-## PoweShell setup
+## PowerShell setup
 ![](images/terminal.png)
 - [Oh My Posh](https://ohmyposh.dev/) - Prompt theme engine
 	> I use a modification of [gruvbox theme](https://ohmyposh.dev/docs/themes#gruvbox).
