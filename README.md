@@ -2,14 +2,14 @@
 Enviroment configurations for development
 
 ## Contents
-- vim (NeoVim) config
-- PowerShell config
-- git config
+- PowerShell 
+- NeoVim 
+- git 
 
 ## PoweShell setup
-![](images/powershell.png)
-![](images/psreadline.png)
+![](images/terminal.png)
 - [Oh My Posh](https://ohmyposh.dev/) - Prompt theme engine
+	> I use a modification of [gruvbox theme](https://ohmyposh.dev/docs/themes#gruvbox).
 - [Terminal Icons](https://github.com/devblackops/Terminal-Icons) - Folder and file icons
 - [PSReadLine](https://docs.microsoft.com/en-us/powershell/module/psreadline/) - Cmdlets for customizing the editing environment, used for autocompletion
 
