@@ -1,16 +1,9 @@
 [alias]
-	s = status
 	co = checkout
-	aliases = config --get-regexp ^alias
+	s = status
 	br = branch
-	lc = log --oneline --graph -15
+	aliases = config --get-regexp '^alias\\.'
 	aa = add .
+	lc = "log --oneline --graph -15 --pretty=format:'%C(#DBBC7F)%h%Creset -%C(#E67E80)%d%Creset %C(#E1E7DD)%s By %C(#7FBBB3)<%an>'"
 [core]
 	editor = nvim
-[color]
-  status = auto
-  diff = auto
-  branch = auto
-  interactive = auto
-  grep = auto
-  ui = auto
