@@ -23,6 +23,7 @@ call plug#begin('~\AppData\Local\nvim\plugged')
 	" Utilities
 	Plug 'junegunn/goyo.vim'
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+	Plug 'tpope/vim-commentary'
 
 	"Finder
 	Plug 'nvim-lua/plenary.nvim'
