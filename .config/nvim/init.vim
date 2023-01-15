@@ -13,7 +13,6 @@ call plug#begin('~\AppData\Local\nvim\plugged')
 	Plug 'sheerun/vim-polyglot'
 	Plug 'windwp/nvim-autopairs'
 	Plug 'mattn/emmet-vim'
-	Plug 'OmniSharp/omnisharp-vim'
 
 	" GUI
 	Plug 'scrooloose/nerdtree'
@@ -69,7 +68,7 @@ require("stat").setup({
     ["C"] = { fg = "#2d353b", bg = "#d699b6" },
     ["T"] = { fg = "#2d353b", bg = "#a7c080" },
     ["S"] = { fg = "#2d353b", bg = "#e67e80" },
-    ["File"] = { fg = "#d3c6aa", bg = "#343f44" },
+    ["File"] = { fg = "#d3c6aa", bg = "#543A48" },
     ["Filetype"] = { fg = "#d3c6aa", bg = "#272e33" },
     ["GitDiffDeletion"] = { fg = "#e67e80", bg = "#232a2e" },
     ["GitDiffInsertion"] = { fg = "#a7c080", bg = "#232a2e" }
@@ -82,7 +81,7 @@ inoremap jf <Esc>
 inoremap <C-s> <Esc>:w<CR>
 nnoremap <C-s> :w<CR>
 nnoremap exit :q!<CR>
-nnoremap markp :MarkdownPreview<CR>
+nnoremap <C-m> :MarkdownPreviewToggle<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -103,3 +102,5 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+let g:coc_global_extensions = ['coc-word', 'coc-snippets', 'coc-html', 'coc-tsserver', 'coc-omnisharp', 'coc-json', 'coc-css']
