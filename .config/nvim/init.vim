@@ -1,4 +1,4 @@
-"General
+"Genera
 set mouse=a
 set showcmd
 set encoding=utf-8
@@ -18,6 +18,7 @@ call plug#begin('~\AppData\Local\nvim\plugged')
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'leath-dub/stat.nvim'
+	Plug 'glepnir/dashboard-nvim'
 	
 	" Utilities
 	Plug 'junegunn/goyo.vim'
@@ -74,6 +75,36 @@ require("stat").setup({
     ["GitDiffInsertion"] = { fg = "#a7c080", bg = "#232a2e" }
   }
 })
+local db = require('dashboard')
+db.custom_header= {
+    \'',
+    \'   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣭⣿⣶⣿⣦⣼⣆         ',
+    \'    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ',
+    \'          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷⠄⠄⠄⠄⠻⠿⢿⣿⣧⣄     ',
+    \'           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ',
+    \'          ⢠⣿⣿⣿⠈  ⠡⠌⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ',
+    \'   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘⠄ ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ',
+    \'  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ',
+    \' ⣠⣿⠿⠛⠄⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ',
+    \' ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇⠄⠛⠻⢷⣄ ',
+    \'      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ',
+    \'       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ',
+    \'',
+		\}
+db.custom_center = {
+	{icon = 'ᐅ\t',
+	desc = 'Find  Files',
+	action = 'Telescope find_files'},
+	{icon = 'ᐅ\t',
+	desc = 'New File',
+	action = 'DashboardNewFile'},
+	{icon = 'ᐅ\t',
+	desc = 'Configuration',
+	action = 'edit $MYVIMRC'},
+  {icon = 'ᐅ\t',
+  desc = 'Exit',
+  action = 'exit'}
+}
 EOF
 
 " Mappings
@@ -104,3 +135,4 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 let g:coc_global_extensions = ['coc-word', 'coc-snippets', 'coc-html', 'coc-tsserver', 'coc-omnisharp', 'coc-json', 'coc-css']
+
