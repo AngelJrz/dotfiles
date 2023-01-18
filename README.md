@@ -12,6 +12,7 @@ Enviroment configurations for development
 	> I use a modification of [gruvbox theme](https://ohmyposh.dev/docs/themes#gruvbox).
 - [Terminal Icons](https://github.com/devblackops/Terminal-Icons) - Folder and file icons
 - [PSReadLine](https://docs.microsoft.com/en-us/powershell/module/psreadline/) - Cmdlets for customizing the editing environment, used for autocompletion
+- [Z-Module](https://www.powershellgallery.com/packages/z/1.1.13) - Quickly navigate the file system in PowerShell based on your cd command history.
 
 ## Neovim setup
 ![](images/vim.png)
