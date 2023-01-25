@@ -29,7 +29,6 @@ Enviroment configurations for development
 - [stat.nvim](https://github.com/leath-dub/stat.nvim) - Less bloated statusline.
 - [dashboard-nvim](https://github.com/glepnir/dashboard-nvim) - Fancy Fastest Async Start Screen Plugin of Neovim.
 ### Utilities
-- [goyo.vim](https://github.com/junegunn/goyo.vim) - Distraction-free writing in Vim.
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) - Preview markdown on your modern browser.
 - [vim-commentary](https://github.com/tpope/vim-commentary) - Comments for nvim.
 ### Finder
