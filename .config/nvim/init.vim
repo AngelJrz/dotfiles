@@ -1,4 +1,4 @@
-"Genera
+"General
 set mouse=a
 set showcmd
 set encoding=utf-8
@@ -21,7 +21,6 @@ call plug#begin('~\AppData\Local\nvim\plugged')
 	Plug 'glepnir/dashboard-nvim'
 	
 	" Utilities
-	Plug 'junegunn/goyo.vim'
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 	Plug 'tpope/vim-commentary'
 
@@ -114,6 +113,7 @@ nnoremap <C-s> :w<CR>
 nnoremap exit :q!<CR>
 nnoremap <C-m> :MarkdownPreviewToggle<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -122,8 +122,11 @@ nnoremap <C-l> <C-w>l
 " Telescope Mappings
 nnoremap tele <cmd>Telescope find_files<cr>
 nnoremap telb <cmd>Telescope buffers<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap gb <cmd>Telescope git_branches<cr>
+nnoremap gc <cmd>Telescope git_commits<cr>
+nnoremap gsh <cmd>Telescope git_stash<cr>
+nnoremap gst <cmd>Telescope git_status<cr>
+
 
 "Mappings COC Auto Select
 inoremap <silent><expr> <TAB>
@@ -135,4 +138,3 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 let g:coc_global_extensions = ['coc-word', 'coc-snippets', 'coc-html', 'coc-tsserver', 'coc-omnisharp', 'coc-json', 'coc-css']
-
