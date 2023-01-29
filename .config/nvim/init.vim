@@ -122,10 +122,10 @@ nnoremap <C-l> <C-w>l
 " Telescope Mappings
 nnoremap tele <cmd>Telescope find_files<cr>
 nnoremap telb <cmd>Telescope buffers<cr>
-nnoremap gb <cmd>Telescope git_branches<cr>
-nnoremap gc <cmd>Telescope git_commits<cr>
-nnoremap gsh <cmd>Telescope git_stash<cr>
-nnoremap gst <cmd>Telescope git_status<cr>
+nnoremap ggb <cmd>Telescope git_branches<cr>
+nnoremap ggc <cmd>Telescope git_commits<cr>
+nnoremap ggsh <cmd>Telescope git_stash<cr>
+nnoremap ggst <cmd>Telescope git_status<cr>
 
 
 "Mappings COC Auto Select
