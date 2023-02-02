@@ -23,6 +23,7 @@ call plug#begin('~\AppData\Local\nvim\plugged')
 	" Utilities
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 	Plug 'tpope/vim-commentary'
+	Plug 'lewis6991/gitsigns.nvim'
 
 	"Finder
 	Plug 'nvim-lua/plenary.nvim'
@@ -49,6 +50,7 @@ autocmd! colorscheme everforest call s:start_theme()
 colorscheme everforest
 
 lua << EOF
+require('gitsigns').setup()
 require("nvim-autopairs").setup {}
 require("stat").setup({
   winbar = {
