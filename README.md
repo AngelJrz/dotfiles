@@ -31,6 +31,7 @@ Enviroment configurations for development
 ### Utilities
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) - Preview markdown on your modern browser.
 - [vim-commentary](https://github.com/tpope/vim-commentary) - Comments for nvim.
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Utils signs for git.
 ### Finder
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Gaze deeply into unknown regions using the power of the moon.
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) - All the lua functions I don't want to write twice.
