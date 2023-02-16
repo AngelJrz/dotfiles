@@ -45,6 +45,5 @@
   "coc.source.word.filetypes": [
     "markdown"
   ],
-  "coc.source.OmniSharp.enable":false,
   "snippets.ultisnips.pythonPrompt": false
 }
