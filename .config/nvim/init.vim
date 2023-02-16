@@ -52,7 +52,7 @@ autocmd! colorscheme everforest call s:start_theme()
 colorscheme everforest
 
 lua << EOF
-require('telescope').setup{  defaults = { file_ignore_patterns = { "node_modules", ".git", ".next", "obj", "bin" }} }
+require('telescope').setup{  defaults = { file_ignore_patterns = { "node_modules", ".git", ".next", "obj", "bin", ".vs" }} }
 require('gitsigns').setup()
 require("nvim-autopairs").setup {}
 require("stat").setup({
@@ -88,6 +88,7 @@ nnoremap <C-s> :w<CR>
 nnoremap cls :q!<CR>
 nnoremap <C-m> :MarkdownPreviewToggle<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-p> :Gitsigns preview_hunk<CR>
 let NERDTreeQuitOnOpen=1
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
