@@ -13,12 +13,12 @@ call plug#begin('~\AppData\Local\nvim\plugged')
 	Plug 'sheerun/vim-polyglot'
 	Plug 'windwp/nvim-autopairs'
 	Plug 'mattn/emmet-vim'
+	Plug 'OmniSharp/omnisharp-vim'
 
 	" GUI
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'leath-dub/stat.nvim'
-	Plug 'glepnir/dashboard-nvim'
 	
 	" Utilities
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
@@ -36,6 +36,8 @@ function! s:start_theme()
 	hi NonText ctermbg=NONE
 	hi Normal guibg=NONE ctermbg=NONE
   hi EndOfBuffer guibg=NONE ctermbg=NONE
+	hi CocFloating guibg=NONE ctermbg=8
+	hi Pmenu guibg=NONE
 	let g:mkdp_theme = 'light'
 endfunction
 
@@ -50,19 +52,19 @@ autocmd! colorscheme everforest call s:start_theme()
 colorscheme everforest
 
 lua << EOF
-require('telescope').setup{  defaults = { file_ignore_patterns = { "node_modules", ".git", ".next" }} }
+require('telescope').setup{  defaults = { file_ignore_patterns = { "node_modules", ".git", ".next", "obj", "bin" }} }
 require('gitsigns').setup()
 require("nvim-autopairs").setup {}
 require("stat").setup({
   winbar = {
     ___,
-    __Stat__.mod.file()
+    Stat.mod.file()
   },
   statusline = {
     ___,
-    __Stat__.mod.mode,
-    __Stat__.mod.filetype,
-    __Stat__.mod.git_diff
+    Stat.mod.mode,
+    Stat.mod.filetype,
+    Stat.mod.git_diff
   },
 	theme = {
     ["N"] = { fg = "#2d353b", bg = "#83c092" },
@@ -71,49 +73,19 @@ require("stat").setup({
     ["C"] = { fg = "#2d353b", bg = "#d699b6" },
     ["T"] = { fg = "#2d353b", bg = "#a7c080" },
     ["S"] = { fg = "#2d353b", bg = "#e67e80" },
-    ["File"] = { fg = "#d3c6aa", bg = "#543A48" },
+    ["File"] = { fg = "#d3c6aa", bg = "#272e33" },
     ["Filetype"] = { fg = "#d3c6aa", bg = "#272e33" },
     ["GitDiffDeletion"] = { fg = "#e67e80", bg = "#232a2e" },
     ["GitDiffInsertion"] = { fg = "#a7c080", bg = "#232a2e" }
   }
 })
-local db = require('dashboard')
-db.custom_header= {
-		 \'',
-		 \'   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣭⣿⣶⣿⣦⣼⣆         ',
-		 \'    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ',
-		 \'          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷⠄⠄⠄⠄⠻⠿⢿⣿⣧⣄     ',
-		 \'           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ',
-		 \'          ⢠⣿⣿⣿⠈  ⠡⠌⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ',
-		 \'   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘⠄ ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ',
-		 \'  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ',
-		 \' ⣠⣿⠿⠛⠄⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ',
-		 \' ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇⠄⠛⠻⢷⣄ ',
-		 \'      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ',
-		 \'       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ',
-		 \'',
-		\}
-db.custom_center = {
-	{icon = 'ᐅ\t',
-	desc = 'Find  Files',
-	action = 'Telescope find_files'},
-	{icon = 'ᐅ\t',
-	desc = 'New File',
-	action = 'DashboardNewFile'},
-	{icon = 'ᐅ\t',
-	desc = 'Configuration',
-	action = 'edit $MYVIMRC'},
-  {icon = 'ᐅ\t',
-  desc = 'Exit',
-  action = 'exit'}
-}
 EOF
 
 " Mappings
 inoremap jf <Esc>
 inoremap <C-s> <Esc>:w<CR>
 nnoremap <C-s> :w<CR>
-nnoremap exit :q!<CR>
+nnoremap cls :q!<CR>
 nnoremap <C-m> :MarkdownPreviewToggle<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
@@ -140,4 +112,4 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-let g:coc_global_extensions = ['coc-word', 'coc-snippets', 'coc-html', 'coc-tsserver', 'coc-omnisharp', 'coc-json', 'coc-css']
+let g:coc_global_extensions = ['coc-word', 'coc-snippets', 'coc-html', 'coc-tsserver', 'coc-json', 'coc-css', 'coc-omnisharp']

@@ -23,11 +23,11 @@ Enviroment configurations for development
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot) - A collection of language packs for Vim.
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Plugin for Neovim that supports multiple characters.
 - [emmet-vim](https://github.com/mattn/emmet-vim) - Vim plug-in which provides support for expanding abbreviations.
+- [omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim) - OmniSharp-vim is a plugin for Vim to provide IDE like abilities for C#.
 ### GUI
 - [nerdtree](https://github.com/preservim/nerdtree) - File system explorer for the Vim editor.
 - [vim-devicons](https://github.com/ryanoasis/vim-devicons) - Icons for vim.
 - [stat.nvim](https://github.com/leath-dub/stat.nvim) - Less bloated statusline.
-- [dashboard-nvim](https://github.com/glepnir/dashboard-nvim) - Fancy Fastest Async Start Screen Plugin of Neovim.
 ### Utilities
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) - Preview markdown on your modern browser.
 - [vim-commentary](https://github.com/tpope/vim-commentary) - Comments for nvim.
