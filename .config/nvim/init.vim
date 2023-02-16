@@ -13,7 +13,6 @@ call plug#begin('~\AppData\Local\nvim\plugged')
 	Plug 'sheerun/vim-polyglot'
 	Plug 'windwp/nvim-autopairs'
 	Plug 'mattn/emmet-vim'
-	Plug 'OmniSharp/omnisharp-vim'
 
 	" GUI
 	Plug 'scrooloose/nerdtree'
