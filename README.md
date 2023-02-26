@@ -5,6 +5,7 @@ Enviroment configurations for development
 - PowerShell 
 - NeoVim 
 - git 
+- Visual Studio
 
 ## PowerShell setup
 ![](images/terminal.png)
